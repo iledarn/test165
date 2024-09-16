@@ -35,9 +35,7 @@
       format = "wheel";  # Specify that this is a wheel
 
       src = pkgs.fetchPypi {
-        inherit pname version format;
-        dist = "py3";
-        python = "py3";
+        inherit pname version;
         sha256 = "e4f6cbe6a1b6adda9c8d6838bd2248a42f189769e4eac4f724537e86b997aee4"; # Replace with actual hash
       };
 
