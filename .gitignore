@@ -1,0 +1,4 @@
+src/
+.venv/
+connector_odoo2odoo/
+auto/

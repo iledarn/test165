@@ -1,0 +1,48 @@
+/home/ildar/TEST165/account-financial-tools:
+  defaults:
+    depth: 1
+  merges:
+  - origin 16.0
+  remotes:
+    origin: https://github.com/OCA/account-financial-tools.git
+  target: origin 16.0
+/home/ildar/TEST165/connector:
+  defaults:
+    depth: 1
+  merges:
+  - origin 16.0
+  remotes:
+    origin: https://github.com/OCA/connector.git
+  target: origin 16.0
+/home/ildar/TEST165/queue:
+  defaults:
+    depth: 1
+  merges:
+  - origin 16.0
+  remotes:
+    origin: https://github.com/OCA/queue.git
+  target: origin 16.0
+/home/ildar/TEST165/reporting-engine:
+  defaults:
+    depth: 1
+  merges:
+  - origin 16.0
+  remotes:
+    origin: https://github.com/OCA/reporting-engine.git
+  target: origin 16.0
+/home/ildar/TEST165/stock-logistics-workflow:
+  defaults:
+    depth: 1
+  merges:
+  - origin 16.0
+  remotes:
+    origin: https://github.com/OCA/stock-logistics-workflow.git
+  target: origin 16.0
+/home/ildar/TEST165/web:
+  defaults:
+    depth: 1
+  merges:
+  - origin 16.0
+  remotes:
+    origin: https://github.com/OCA/web.git
+  target: origin 16.0

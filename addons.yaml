@@ -1,0 +1,24 @@
+ENV:
+  DEFAULT_REPO_PATTERN: https://github.com/OCA/{}.git
+  ODOO_VERSION: 16.0
+
+queue:
+  - "queue_job"
+
+connector:
+  - "component"
+  - "component_event"
+  - "connector"
+
+web:
+  - "web_responsive"
+
+account-financial-tools:
+  - "account_asset_management"
+
+reporting-engine:
+  - "report_xlsx"
+  - "report_xlsx_helper"
+
+stock-logistics-workflow:
+  - "stock_no_negative"
