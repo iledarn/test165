@@ -9,23 +9,7 @@
   outputs = { self, nixpkgs, flake-utils, }:
   flake-utils.lib.eachDefaultSystem (system:
   let
-    # Create a custom nixpkgs configuration
-    nixpkgsConfig = {
-      config = {
-        permittedInsecurePackages = [
-          "qtwebkit-5.212.0-alpha4"
-        ];
-        # You can add other nixpkgs configurations here if needed
-      };
-    };
-
-    # Use the custom configuration when importing nixpkgs
-    pkgs = import nixpkgs {
-      inherit system;
-      inherit (nixpkgsConfig) config;
-    };
-
-    # pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = nixpkgs.legacyPackages.${system};
 
     odoorpc = pkgs.python310Packages.buildPythonPackage rec {
       pname = "OdooRPC";
@@ -101,7 +85,6 @@ myEnv = pkgs.buildEnv {
     sassc
     s3fs
     postgresql_15
-    wkhtmltopdf
   ];
 };
   in
