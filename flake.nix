@@ -34,16 +34,17 @@
       version = "4.0.1";
       format = "wheel";  # Specify that this is a wheel
 
-      src = pkgs.fetchPypi {
-        inherit pname version;
-        dist = "py3";
-        python = "py3";
+      src = pkgs.fetchurl {
+        url = "https://files.pythonhosted.org/packages/d3/39/7849f5b08226e4085de37a95095482475a7d3811ee7e736e9ce7cb9f2a45/git_aggregator-4.0.1-py3-none-any.whl";
         sha256 = "e4f6cbe6a1b6adda9c8d6838bd2248a42f189769e4eac4f724537e86b997aee4"; # Replace with actual hash
       };
 
       doCheck = false;  # Skip tests if they're causing issues
       propagatedBuildInputs = with pkgs.python310Packages; [
-        # Add any dependencies OdooRPC needs here
+        pyyaml
+        argcomplete
+        colorama
+        requests
       ];
     };
 
