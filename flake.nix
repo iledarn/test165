@@ -4,9 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     flake-utils.url = "github:numtide/flake-utils";
+    wkhtmltopdf-flake.url = "path:../WKHTMLTOPDFNIX";
   };
 
-  outputs = { self, nixpkgs, flake-utils, }:
+  outputs = { self, nixpkgs, flake-utils, wkhtmltopdf-flake }:
   flake-utils.lib.eachDefaultSystem (system:
   let
     pkgs = nixpkgs.legacyPackages.${system};
@@ -78,6 +79,8 @@
       mock
     ]);
 
+    wkhtmltopdf = wkhtmltopdf-flake.packages.${system}.default;
+
     myEnv = pkgs.buildEnv {
       name = "my-python-env-3-10-13";
       paths = with pkgs; [
@@ -85,6 +88,7 @@
         sassc
         s3fs
         postgresql_15
+        wkhtmltopdf
       ];
     };
   in
