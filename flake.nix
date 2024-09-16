@@ -25,68 +25,68 @@
 
       doCheck = false;  # Skip tests if they're causing issues
       propagatedBuildInputs = with pkgs.python310Packages; [
-    # Add any dependencies OdooRPC needs here
-  ];
-};
+        # Add any dependencies OdooRPC needs here
+      ];
+    };
 
-pythonEnv = pkgs.python310.withPackages (ps: with ps; [
-  odoorpc
-  babel
-  chardet
-  cryptography
-  decorator
-  docutils
-  ebaysdk
-  freezegun
-  gevent
-  greenlet
-  idna
-  jinja2
-  libsass
-  lxml
-  markupsafe
-  num2words
-  ofxparse
-  passlib
-  pillow
-  polib
-  psutil
-  psycopg2
-  pydot
-  pyopenssl
-  pypdf2
-  pyserial
-  python-dateutil
-  python-ldap
-  python-stdnum
-  pytz
-  pyusb
-  qrcode
-  reportlab
-  requests
-  urllib3
-  vobject
-  werkzeug
-  xlrd
-  xlsxwriter
-  xlwt
-  zeep
-  beautifulsoup4
-  cachetools
+    pythonEnv = pkgs.python310.withPackages (ps: with ps; [
+      odoorpc
+      babel
+      chardet
+      cryptography
+      decorator
+      docutils
+      ebaysdk
+      freezegun
+      gevent
+      greenlet
+      idna
+      jinja2
+      libsass
+      lxml
+      markupsafe
+      num2words
+      ofxparse
+      passlib
+      pillow
+      polib
+      psutil
+      psycopg2
+      pydot
+      pyopenssl
+      pypdf2
+      pyserial
+      python-dateutil
+      python-ldap
+      python-stdnum
+      pytz
+      pyusb
+      qrcode
+      reportlab
+      requests
+      urllib3
+      vobject
+      werkzeug
+      xlrd
+      xlsxwriter
+      xlwt
+      zeep
+      beautifulsoup4
+      cachetools
 
-  setuptools
-  mock
-]);
+      setuptools
+      mock
+    ]);
 
-myEnv = pkgs.buildEnv {
-  name = "my-python-env-3-10-13";
-  paths = with pkgs; [
-    pythonEnv
-    sassc
-    s3fs
-    postgresql_15
-  ];
-};
+    myEnv = pkgs.buildEnv {
+      name = "my-python-env-3-10-13";
+      paths = with pkgs; [
+        pythonEnv
+        sassc
+        s3fs
+        postgresql_15
+      ];
+    };
   in
   {
     packages.default = myEnv;
