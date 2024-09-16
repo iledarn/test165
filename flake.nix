@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     flake-utils.url = "github:numtide/flake-utils";
-    wkhtmltopdf-flake.url = "github:iledarn/WKHTMLTOPDFNIX";
+    wkhtmltopdf-flake.url = "github:iledarn/wkhtmltopodfnix";
   };
 
   outputs = { self, nixpkgs, flake-utils, wkhtmltopdf-flake }:
