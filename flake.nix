@@ -29,8 +29,26 @@
         # Add any dependencies OdooRPC needs here
       ];
     };
+    gitaggregator = pkgs.python310Packages.buildPythonPackage rec {
+      pname = "git-aggregator";
+      version = "4.0.1";
+      format = "wheel";  # Specify that this is a wheel
+
+      src = pkgs.fetchPypi {
+        inherit pname version format;
+        dist = "py2.py3";
+        python = "py2.py3";
+        sha256 = "e4f6cbe6a1b6adda9c8d6838bd2248a42f189769e4eac4f724537e86b997aee4"; # Replace with actual hash
+      };
+
+      doCheck = false;  # Skip tests if they're causing issues
+      propagatedBuildInputs = with pkgs.python310Packages; [
+        # Add any dependencies OdooRPC needs here
+      ];
+    };
 
     pythonEnv = pkgs.python310.withPackages (ps: with ps; [
+      gitaggregator
       odoorpc
       babel
       chardet
