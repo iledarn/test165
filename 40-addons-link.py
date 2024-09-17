@@ -6,8 +6,8 @@ from glob import iglob
 
 LOG_LEVELS = frozenset({"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"})
 
-CUSTOM_DIR = "/home/ildar/TEST165"
-AUTO_DIR = "/home/ildar/TEST165/auto"
+CUSTOM_DIR = "/home/ubuntu/test165"
+AUTO_DIR = "/home/ubuntu/test165/auto"
 ADDONS_DIR = os.path.join(AUTO_DIR, "addons")
 SRC_DIR = CUSTOM_DIR
 

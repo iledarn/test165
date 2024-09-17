@@ -19,3 +19,5 @@
    cd test165
 
    mkdir -p auto/addons
+
+   python 40-addons-link.py
