@@ -21,3 +21,9 @@
    mkdir -p auto/addons
 
    python 40-addons-link.py
+
+   cd ~
+
+   ./test165/odoo/odoo-bin -s
+
+   mv .odoorc odoo.conf
