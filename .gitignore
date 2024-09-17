@@ -4,3 +4,9 @@ connector_odoo2odoo/
 auto/
 odoo/
 auto_repos.yaml
+account-financial-tools/
+connector/
+queue/
+reporting-engine/
+stock-logistics-workflow/
+web/
