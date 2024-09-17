@@ -3,3 +3,9 @@
    git clone https://github.com/iledarn/test165.git
    cd test165
    nix profile install
+
+   gitaggregate -c repos.yaml
+
+   python autoaggregate.py
+
+   gitaggregate -c auto_repos.yaml

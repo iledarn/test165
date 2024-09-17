@@ -1,7 +1,7 @@
 import os
 import yaml
 
-SRC_DIR = "/home/ildar/TEST165"
+SRC_DIR = "/home/ubuntu/test165"
 
 
 def origin_for(
