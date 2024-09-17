@@ -9,7 +9,7 @@ LOG_LEVELS = frozenset({"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"})
 CUSTOM_DIR = "/home/ildar/TEST165"
 AUTO_DIR = "/home/ildar/TEST165/auto"
 ADDONS_DIR = os.path.join(AUTO_DIR, "addons")
-SRC_DIR = os.path.join(CUSTOM_DIR, "src")
+SRC_DIR = CUSTOM_DIR
 
 
 ADDONS_YAML = os.path.join(CUSTOM_DIR, "addons.yaml")
