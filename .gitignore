@@ -3,3 +3,4 @@ src/
 connector_odoo2odoo/
 auto/
 odoo/
+auto_repos.yaml
